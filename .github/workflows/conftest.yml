@@ -41,7 +41,7 @@ jobs:
       - name: Run conftest
         run: |
           echo Running conftest ...
-          conftest --policy policies test infrastructure/terraform.tf
+          conftest --policy policies test infrastructure/*
       
       
       
