@@ -28,7 +28,8 @@ jobs:
       - name: Install wget
         run: |
           echo Installing wget ...
-          sudo apt-get update && apt-get install wget
+          sudo apt-get update && 
+          sudo apt-get install wget
             
       - name: Install conftest
         run: |
