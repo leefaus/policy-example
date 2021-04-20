@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  install-conftest:
+  conftest-runner:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -37,6 +37,12 @@ jobs:
           wget https://github.com/open-policy-agent/conftest/releases/download/v0.24.0/conftest_0.24.0_Linux_x86_64.tar.gz
           tar xzf conftest_0.24.0_Linux_x86_64.tar.gz
           sudo mv conftest /usr/local/bin
+          
+      - name: Run conftest
+        run: |
+          echo Running conftest ...
+          conftest --policy policies test infrastructure/terraform.tf
+      
       
       
       
