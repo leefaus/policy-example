@@ -1,4 +1,4 @@
 resource "aws_alb_listener" "my-alb-listener"{
-    port     = "80"
+    port     = "8080"
     protocol = "HTTP"
 }
